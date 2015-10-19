@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="I52-ah-WlP">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Acromine-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="3QQ-ek-XFH">
+                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                                <animations/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DictionaryTableViewCellIdentifier" textLabel="I2U-jX-wB7" style="IBUITableViewCellStyleDefault" id="DXs-vR-GZo">
+                                        <rect key="frame" x="0.0" y="50" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DXs-vR-GZo" id="p4c-z5-arr">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="I2U-jX-wB7">
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="TUk-eE-F3y"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" placeholder="Enter Short Form" translatesAutoresizingMaskIntoConstraints="NO" id="L73-lB-aNN">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <animations/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="liL-rs-bVB"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="L73-lB-aNN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dHG-Db-kOj"/>
+                            <constraint firstItem="3QQ-ek-XFH" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="fJc-7K-L3V"/>
+                            <constraint firstItem="L73-lB-aNN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hVV-x7-M1o"/>
+                            <constraint firstItem="L73-lB-aNN" firstAttribute="leading" secondItem="3QQ-ek-XFH" secondAttribute="leading" id="nSY-6b-Git"/>
+                            <constraint firstItem="L73-lB-aNN" firstAttribute="bottom" secondItem="3QQ-ek-XFH" secondAttribute="top" id="u5N-sV-4Xk"/>
+                            <constraint firstItem="L73-lB-aNN" firstAttribute="trailing" secondItem="3QQ-ek-XFH" secondAttribute="trailing" id="ypf-we-8u1"/>
+                            <constraint firstAttribute="trailing" secondItem="L73-lB-aNN" secondAttribute="trailing" id="z3v-Hv-9wv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Acromine" id="bJw-Xy-OA0"/>
+                    <connections>
+                        <outlet property="dictionaryTableView" destination="3QQ-ek-XFH" id="9gD-rB-u8E"/>
+                        <outlet property="searchBar" destination="L73-lB-aNN" id="W0d-Dv-B9n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="958" y="175"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="boX-eC-sWS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I52-ah-WlP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1tK-bn-R5U">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3Ra-rl-tTx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b4S-lx-ycz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="259" y="175"/>
+        </scene>
+    </scenes>
+</document>
